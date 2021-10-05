@@ -1205,6 +1205,11 @@ static const CGFloat kScrollViewBottomSpace = 5;
         }
         
         [button setAttributedTitle:attributedTitle selectedTitle:attributedSelectedTitle];
+        
+        if ([self.delegate respondsToSelector:@selector(dropdownMenu:discosureIndicatorVisibleForComponent:)]) {
+            BOOL isVisible = [self.delegate dropdownMenu:self discosureIndicatorVisibleForComponent:component];
+            button.disclosureIndicatorView.hidden = !isVisible;
+        }
     }
 }
 

@@ -184,6 +184,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// Return the title for a header component.
 - (nullable NSString *)dropdownMenu:(MKDropdownMenu *)dropdownMenu titleForComponent:(NSInteger)component;
 
+/// Toggle discosure indicator view visibility
+- (BOOL)dropdownMenu:(MKDropdownMenu *)dropdownMenu discosureIndicatorVisibleForComponent:(NSInteger)component;
+
 /// Return the title for a selected header component.
 - (nullable NSString *)dropdownMenu:(MKDropdownMenu *)dropdownMenu titleForSelectedComponent:(NSInteger)component;
 
